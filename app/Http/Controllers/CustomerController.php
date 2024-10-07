@@ -28,4 +28,21 @@ class CustomerController extends Controller
         return redirect(route('customers.customer'));
          
     }
+
+    public function modify(Customer $customer){
+        return view('customers.modify', ['customer'=>$customer]);    //customer page at customer folder
+    }
+
+    public function update(Customer $customer, Request $request){
+        $createdCustomer = $request->validate([
+           'name'=>'required',
+           'address'=>'required', 
+           'designation'=>'required', 
+           'age'=>'required',  
+        ]);
+
+        $customer->update($createdCustomer);
+        return redirect(route('customers.customer'));
+         
+    }
 }

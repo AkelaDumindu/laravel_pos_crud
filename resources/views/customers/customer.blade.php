@@ -33,7 +33,7 @@
                     <td> {{$customer->designation}} </td>
                     <td> {{$customer->age}} </td>
                     <td>
-                        <a href="#" class="btn btn-warning btn-sm">Update</a>
+                        <a href="{{route('customers.modify',['customer'=>$customer])}}" class="btn btn-warning btn-sm">Update</a>
                     </td>
                     <td>
                     <a href="#" class="btn btn-danger btn-sm">Delete</a>

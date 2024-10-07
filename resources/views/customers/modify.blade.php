@@ -8,41 +8,41 @@
 </head>
 <body>
     
-<form method="post" action="{{route('customers.add')}}">
+<form method="put" action="{{route('customers.update', ['customer'=>$customer])}}">
 @csrf
-@method('post')
+@method('put')
     <div class="outer" style="margin: 50px 0;">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="form-group">
                         <label for="name">Name</label>
-                        <input class="form-control" type="text" placeholder="Akela" name="name" id="name">
+                        <input class="form-control" type="text" placeholder="Akela" name="name" id="name" value="{{$customer->name}}">
                     </div>
                 </div>
 
                 <div class="col-12">
                     <div class="form-group">
                         <label for="name">Address</label>
-                        <input class="form-control" type="text" placeholder="Galle" name="address" id="address">
+                        <input class="form-control" type="text" placeholder="Galle" name="address" id="address" value="{{$customer->address}}">
                     </div>
                 </div>
                 <div class="col-12">
                     <div class="form-group">
                         <label for="name">Designation</label>
-                        <input class="form-control" type="text" placeholder="Software Engineer" name="designation" id="designation">
+                        <input class="form-control" type="text" placeholder="Software Engineer" name="designation" id="designation" value="{{$customer->designation}}">
                     </div>
                 </div>
                 <div class="col-12">
                     <div class="form-group">
                         <label for="name">Age</label>
-                        <input class="form-control" type="number" placeholder="24" name="age" id="age">
+                        <input class="form-control" type="number" placeholder="24" name="age" id="age" value="{{$customer->age}}">
                     </div>
                 </div>
                 <div class="col-12">
                     <div class="form-group">
                         <br>
-                        <input class="btn btn-primary col-12" type="submit" value="Save Customer">
+                        <input class="btn btn-success col-12" type="submit" value="Update Customer">
                     </div>
                 </div>
             </div>
