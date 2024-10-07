@@ -8,7 +8,7 @@
 </head>
 <body>
     
-<form method="put" action="{{route('customers.update', ['customer'=>$customer])}}">
+<form method="post" action="{{route('customers.update', ['customer'=>$customer])}}">
 @csrf
 @method('put')
     <div class="outer" style="margin: 50px 0;">

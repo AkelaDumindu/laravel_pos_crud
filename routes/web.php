@@ -20,7 +20,7 @@ Route::post('/api/v1/add-customer',
 Route::get('/api/v1/customers/{customer}/modify', 
 [CustomerController::class, 'modify'])->name('customers.modify'); 
 
-Route::get('/api/v1/customers/{customer}/update', 
+Route::put('/api/v1/customers/{customer}/update', 
 [CustomerController::class, 'update'])->name('customers.update'); 
 
 Route::delete('/api/v1/customers/{customer}/delete', 
