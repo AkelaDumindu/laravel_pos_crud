@@ -8,7 +8,8 @@ use App\Models\Customer;
 class CustomerController extends Controller
 {
     public function customers(){
-        return view('customers.customer');    //customer page at customer folder
+        $customerList = Customer::all();
+        return view('customers.customer', ['customers'=>$customerList]);    //customer page at customer folder
     }
 
     public function new(){
