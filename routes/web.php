@@ -8,7 +8,11 @@ Route::get('/', function () {
 });
 
 Route::get('/api/v1/customers', 
-[CustomerController::class, 'customers'])->name('customers.customer ');
+[CustomerController::class, 'customers'])->name('customers.customer');
 
 Route::get('/api/v1/new-customer-form', 
 [CustomerController::class, 'new'])->name('customers.new');  //any name for the name
+
+
+Route::post('/api/v1/add-customer', 
+[CustomerController::class, 'add'])->name('customers.add'); 
